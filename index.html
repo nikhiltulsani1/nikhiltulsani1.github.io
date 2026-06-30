@@ -69,7 +69,6 @@
   --amber:#d97706; --amber-bg:#fffbeb; --amber-line:#fde2a8;
   --purple:#7c3aed; --purple-bg:#f5f0ff; --purple-line:#ddd0fb; --purple-dark:#6d28d9;
   --sans:'Inter',sans-serif;
-  --shadow:0 1px 2px rgba(15,23,42,0.04), 0 1px 6px rgba(15,23,42,0.03);
 }
 [data-theme="dark"]{
   --bg:#0b0f17; --bg2:#11161f; --bg3:#161c27;
@@ -79,7 +78,6 @@
   --green:#34d976; --green-bg:#0e2417; --green-line:#1c4a30;
   --amber:#f5a93f; --amber-bg:#2a1f0c; --amber-line:#4a3819;
   --purple:#a684ff; --purple-bg:#1c1530; --purple-line:#3a2c63; --purple-dark:#c0a8ff;
-  --shadow:0 1px 2px rgba(0,0,0,0.2), 0 2px 10px rgba(0,0,0,0.18);
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -91,11 +89,11 @@ body{
 ::selection{background:var(--blue-bg);color:var(--blue-dark);}
 
 /* Two-tier width system: prose stays readable, grids/visual content use more room on large screens */
-.wrap{max-width:720px;margin:0 auto;padding:32px 28px 0;border-top:1px solid var(--border2);}
+.wrap{max-width:960px;margin:0 auto;padding:24px 36px 0;}
 
 /* ───── NAV ───── */
 nav{position:sticky;top:0;background:var(--bg);background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50;}
-.nav-inner{max-width:720px;margin:0 auto;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.nav-inner{max-width:960px;margin:0 auto;padding:14px 36px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
 .nav-mark{font-size:15px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:-.01em;flex-shrink:0;}
 .nav-mark span{color:var(--blue);}
 .nav-right{display:flex;align-items:center;gap:16px;}
@@ -105,10 +103,9 @@ nav{position:sticky;top:0;background:var(--bg);background:color-mix(in srgb, var
 .theme-toggle:hover{border-color:var(--blue-line);color:var(--blue);}
 
 /* ───── VIEW SWITCH (signature element) ───── */
-.view-switch{display:flex;background:var(--bg3);border:1px solid var(--border);border-radius:9px;padding:3px;gap:2px;}
+.view-switch{display:flex;align-items:center;background:var(--bg3);border:1px solid var(--border);border-radius:9px;padding:3px;gap:2px;}
 .view-btn{font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:7px;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:all .18s;white-space:nowrap;}
-.view-btn.active{background:var(--bg);color:var(--blue);box-shadow:0 1px 3px rgba(15,23,42,0.08);}
-[data-theme="dark"] .view-btn.active{box-shadow:0 1px 3px rgba(0,0,0,0.3);}
+.view-btn.active{background:var(--bg);color:var(--blue);}
 
 /* ───── PILL ───── */
 .pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid;}
@@ -120,8 +117,8 @@ nav{position:sticky;top:0;background:var(--bg);background:color-mix(in srgb, var
 
 /* ───── HERO ───── */
 .hero{padding:56px 0 44px;}
-.hero-eyebrow{font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:16px;color:var(--blue);}
 h1{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.025em;line-height:1.15;margin-bottom:18px;color:var(--text);}
+.hero-name{font-size:15px;font-weight:600;color:var(--muted);letter-spacing:.03em;margin-bottom:10px;}
 h1 .accent{color:var(--blue);}
 .hero-sub{font-size:16px;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:24px;}
 .hero-sub strong{color:var(--text);font-weight:600;}
@@ -133,14 +130,14 @@ h1 .accent{color:var(--blue);}
 .hl-btn.primary:hover{background:var(--blue-dark);border-color:var(--blue-dark);color:#fff;}
 
 /* ───── SECTIONS ───── */
-section{padding-bottom:48px;}
-section.hero .wrap{border-top:none;padding-top:48px;}
-.stack-section .wrap,.certs-section .wrap{max-width:1080px;}
+section{padding-bottom:32px;}
+section.hero .wrap{padding-top:20px;}
+.stack-section .wrap,.certs-section .wrap{max-width:1200px;}
 .sec-label{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;color:var(--blue);}
 .sec-title{font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:24px;color:var(--text);}
 
 /* ───── PROJECT CARDS ───── */
-.proj{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:14px;box-shadow:var(--shadow);transition:border-color .2s,transform .15s;}
+.proj{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:14px;transition:border-color .2s,transform .15s;}
 .proj:hover{border-color:var(--blue-line);transform:translateY(-1px);}
 .proj-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:10px;flex-wrap:wrap;}
 .proj-title{font-size:16px;font-weight:700;color:var(--text);}
@@ -152,6 +149,8 @@ section.hero .wrap{border-top:none;padding-top:48px;}
 .proj-links a:hover{text-decoration:underline;}
 .proj.dim{opacity:.7;}
 .proj.bridge{border:1px solid var(--blue-line);background:var(--blue-bg);}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:780px){.proj-grid{grid-template-columns:1fr;}}
 
 /* ───── CAPSULE DIVIDER ───── */
 .capsule-divider{display:flex;align-items:center;gap:14px;margin:28px 0 16px;}
@@ -169,7 +168,7 @@ section.hero .wrap{border-top:none;padding-top:48px;}
 .exp-desc strong{color:var(--text);font-weight:600;}
 
 /* ───── STACK GRID ───── */
-.stack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;}
+.stack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
 .stack-item{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;}
 .stack-cat{font-size:10px;color:var(--hint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;font-weight:600;}
 .stack-name{font-size:13px;color:var(--text);font-weight:600;}
@@ -259,6 +258,7 @@ footer{padding:40px 0 56px;text-align:center;}
   <div class="nav-inner">
     <a href="#" class="nav-mark">Nikhil<span>.</span></a>
     <div class="view-switch">
+      
       <button class="view-btn active" id="btnAI" onclick="setView('ai')">AI Engineer</button>
       <button class="view-btn" id="btnQA" onclick="setView('qa')">QA Engineer</button>
     </div>
@@ -296,10 +296,18 @@ footer{padding:40px 0 56px;text-align:center;}
       <button class="profile-close" onclick="closeProfile()" aria-label="Close profile"><span aria-hidden="true">✕</span></button>
     </div>
     <div class="profile-links">
+      <a href="tel:+919574711771" class="profile-link">
+        <span class="pl-icon" aria-hidden="true">📞</span>
+        <div class="pl-text"><div class="pl-label">Phone</div><div class="pl-value">+91 9574711771</div></div>
+      </a>
       <a href="mailto:nikhil.tulsani1@gmail.com" class="profile-link">
         <span class="pl-icon" aria-hidden="true">✉️</span>
         <div class="pl-text"><div class="pl-label">Email</div><div class="pl-value">nikhil.tulsani1@gmail.com</div></div>
       </a>
+      <div class="profile-link" style="cursor:default;">
+        <span class="pl-icon" aria-hidden="true">📍</span>
+        <div class="pl-text"><div class="pl-label">Location</div><div class="pl-value">Ahmedabad, India</div></div>
+      </div>
       <a href="https://www.linkedin.com/in/nikhil-tulsani-3a2575126/" class="profile-link" target="_blank">
         <span class="pl-icon" aria-hidden="true">💼</span>
         <div class="pl-text"><div class="pl-label">LinkedIn</div><div class="pl-value">Connect on LinkedIn</div></div>
@@ -308,7 +316,7 @@ footer{padding:40px 0 56px;text-align:center;}
         <span class="pl-icon" aria-hidden="true">💻</span>
         <div class="pl-text"><div class="pl-label">GitHub</div><div class="pl-value">@nikhiltulsani1</div></div>
       </a>
-      <a href="#" class="profile-link" target="_blank">
+      <a href="./NikhilTulsani_Resume.pdf" class="profile-link" target="_blank">
         <span class="pl-icon" aria-hidden="true">📄</span>
         <div class="pl-text"><div class="pl-label">Resume</div><div class="pl-value">Download PDF</div></div>
       </a>
@@ -319,9 +327,9 @@ footer{padding:40px 0 56px;text-align:center;}
   <!-- ═══════════════════ AI ENGINEER VIEW ═══════════════════ -->
   <div class="view-content active" id="view-ai">
 
-    <section class="hero" style="border-top:none;padding-top:48px;">
+    <section class="hero" style="padding-top:20px;">
       <div class="wrap">
-      <div class="hero-eyebrow">Ahmedabad, India</div>
+      <div class="hero-name">Nikhil Tulsani</div>
       <h1>Senior QA Engineer<br>building toward <span class="accent">AI Engineer.</span></h1>
       <p class="hero-sub"><strong>8 years</strong> shipping production software for US, Australian and UAE clients. Now building agentic AI systems — RAG pipelines, multi-agent orchestration, MCP integrations — with the same verification discipline I brought to QA.</p>
       <div class="hero-meta">
@@ -360,6 +368,7 @@ footer{padding:40px 0 56px;text-align:center;}
 
       <div class="capsule-divider"><span class="capsule">Personal Projects</span></div>
 
+      <div class="proj-grid">
       <div class="proj">
         <div class="proj-top">
           <span class="proj-title">PRD-to-Sprint Negotiator</span>
@@ -389,6 +398,7 @@ footer{padding:40px 0 56px;text-align:center;}
           <span class="ptag">Parallel QA agents</span>
         </div>
         <div class="proj-links"><a href="https://github.com/nikhiltulsani1" target="_blank">View on GitHub →</a></div>
+      </div>
       </div>
 
       <div class="proj">
@@ -510,9 +520,9 @@ footer{padding:40px 0 56px;text-align:center;}
   <!-- ═══════════════════ QA ENGINEER VIEW ═══════════════════ -->
   <div class="view-content" id="view-qa">
 
-    <section class="hero" style="border-top:none;padding-top:48px;">
+    <section class="hero" style="padding-top:20px;">
       <div class="wrap">
-      <div class="hero-eyebrow">Ahmedabad, India · 9 Years in Quality Engineering</div>
+      <div class="hero-name">Nikhil Tulsani</div>
       <h1>Senior QA Engineer.<br>Full-cycle <span class="accent">test ownership.</span></h1>
       <p class="hero-sub">8 years of manual, automation, API, and load testing across <strong>BFSI, SaaS, and Healthcare</strong>. Enterprise client engagements across 3 continents. The same rigor now extends into evaluating AI systems.</p>
       <div class="hero-meta">
