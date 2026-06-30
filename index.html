@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikhil Tulsani — AI Engineer | Senior QA Engineer, 9 Years</title>
+<meta name="description" content="Senior QA Engineer (8 years) transitioning to AI Engineer. Production AI delivery, agentic systems (MCP, LangGraph), RAG, 14 certifications, Microsoft hackathon projects. Ahmedabad, India.">
+<meta name="author" content="Nikhil Tulsani">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / LinkedIn / Facebook preview -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Nikhil Tulsani — AI Engineer | Senior QA Engineer, 9 Years">
+<meta property="og:description" content="8 years production software delivery, now building agentic AI systems — RAG, MCP, LangGraph. 14 certifications. Elite Engineer Award. 2 shipped hackathon projects.">
+<meta property="og:url" content="https://nikhiltulsani1.github.io">
+<meta property="og:site_name" content="Nikhil Tulsani">
+<meta property="profile:first_name" content="Nikhil">
+<meta property="profile:last_name" content="Tulsani">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nikhil Tulsani — AI Engineer | Senior QA Engineer, 9 Years">
+<meta name="twitter:description" content="8 years production software delivery, now building agentic AI systems — RAG, MCP, LangGraph. 14 certifications. Elite Engineer Award.">
+
+<!-- Structured data for AI tools / search engines (schema.org Person) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nikhil Tulsani",
+  "jobTitle": "Senior QA Engineer transitioning to AI Engineer",
+  "description": "8 years of production software delivery across BFSI, SaaS, and Healthcare domains for US, Australian, and UAE clients. Now building agentic AI systems including RAG pipelines, multi-agent orchestration, and MCP integrations.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ahmedabad",
+    "addressCountry": "IN"
+  },
+  "email": "mailto:nikhil.tulsani1@gmail.com",
+  "sameAs": [
+    "https://github.com/nikhiltulsani1",
+    "https://www.linkedin.com/in/nikhil-tulsani-3a2575126/"
+  ],
+  "knowsAbout": [
+    "Agentic AI", "RAG", "LangChain", "LangGraph", "Model Context Protocol",
+    "AI Engineering", "Conversational AI", "Test Automation", "Quality Assurance",
+    "Python", "AWS", "Azure AI Foundry"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Hexaware Technologies"
+  },
+  "alumniOf": [
+    { "@type": "Organization", "name": "Maruti Techlabs" },
+    { "@type": "Organization", "name": "Streebo" }
+  ],
+  "award": "Elite Engineer Recognition Award, May 2026"
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#ffffff; --bg2:#f7f9fc; --bg3:#eef2f7;
+  --border:#e2e8f0; --border2:#edf1f5;
+  --text:#0f172a; --muted:#5b6472; --hint:#94a0b0;
+  --blue:#2563eb; --blue-bg:#eff4ff; --blue-line:#bfd5fc; --blue-dark:#1d4ed8;
+  --green:#16a34a; --green-bg:#f0fdf4; --green-line:#bbf0cb;
+  --amber:#d97706; --amber-bg:#fffbeb; --amber-line:#fde2a8;
+  --purple:#7c3aed; --purple-bg:#f5f0ff; --purple-line:#ddd0fb; --purple-dark:#6d28d9;
+  --sans:'Inter',sans-serif;
+  --shadow:0 1px 2px rgba(15,23,42,0.04), 0 1px 6px rgba(15,23,42,0.03);
+}
+[data-theme="dark"]{
+  --bg:#0b0f17; --bg2:#11161f; --bg3:#161c27;
+  --border:#1f2733; --border2:#171e29;
+  --text:#e8edf4; --muted:#94a0b0; --hint:#5b6472;
+  --blue:#5b9bff; --blue-bg:#0f1d35; --blue-line:#1f3a63; --blue-dark:#7eb0ff;
+  --green:#34d976; --green-bg:#0e2417; --green-line:#1c4a30;
+  --amber:#f5a93f; --amber-bg:#2a1f0c; --amber-line:#4a3819;
+  --purple:#a684ff; --purple-bg:#1c1530; --purple-line:#3a2c63; --purple-dark:#c0a8ff;
+  --shadow:0 1px 2px rgba(0,0,0,0.2), 0 2px 10px rgba(0,0,0,0.18);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);font-family:var(--sans);line-height:1.6;transition:background-color .2s,color .2s;
+}
+::selection{background:var(--blue-bg);color:var(--blue-dark);}
+
+/* Two-tier width system: prose stays readable, grids/visual content use more room on large screens */
+.wrap{max-width:720px;margin:0 auto;padding:32px 28px 0;border-top:1px solid var(--border2);}
+
+/* ───── NAV ───── */
+nav{position:sticky;top:0;background:var(--bg);background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50;}
+.nav-inner{max-width:720px;margin:0 auto;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.nav-mark{font-size:15px;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:-.01em;flex-shrink:0;}
+.nav-mark span{color:var(--blue);}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.mobile-menu-btn{display:flex;width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--bg2);color:var(--muted);cursor:pointer;align-items:center;justify-content:center;font-size:15px;}
+.mobile-menu-btn:hover{border-color:var(--blue-line);color:var(--blue);}
+.theme-toggle{width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--bg2);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;font-size:15px;flex-shrink:0;}
+.theme-toggle:hover{border-color:var(--blue-line);color:var(--blue);}
+
+/* ───── VIEW SWITCH (signature element) ───── */
+.view-switch{display:flex;background:var(--bg3);border:1px solid var(--border);border-radius:9px;padding:3px;gap:2px;}
+.view-btn{font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:7px;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:all .18s;white-space:nowrap;}
+.view-btn.active{background:var(--bg);color:var(--blue);box-shadow:0 1px 3px rgba(15,23,42,0.08);}
+[data-theme="dark"] .view-btn.active{box-shadow:0 1px 3px rgba(0,0,0,0.3);}
+
+/* ───── PILL ───── */
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;border:1px solid;}
+.pill.green{color:var(--green);background:var(--green-bg);border-color:var(--green-line);}
+.pill.amber{color:var(--amber);background:var(--amber-bg);border-color:var(--amber-line);}
+.pill.blue{color:var(--blue);background:var(--blue-bg);border-color:var(--blue-line);}
+.pill.purple{color:var(--blue);background:var(--blue-bg);border-color:var(--blue-line);}
+.pill::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;}
+
+/* ───── HERO ───── */
+.hero{padding:56px 0 44px;}
+.hero-eyebrow{font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:16px;color:var(--blue);}
+h1{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.025em;line-height:1.15;margin-bottom:18px;color:var(--text);}
+h1 .accent{color:var(--blue);}
+.hero-sub{font-size:16px;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:24px;}
+.hero-sub strong{color:var(--text);font-weight:600;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
+.hero-links{display:flex;gap:12px;flex-wrap:wrap;}
+.hl-btn{font-size:13.5px;font-weight:600;padding:10px 18px;border-radius:8px;text-decoration:none;border:1px solid var(--border);color:var(--text);transition:all .15s;display:inline-flex;align-items:center;gap:7px;background:var(--bg2);}
+.hl-btn:hover{border-color:var(--blue-line);background:var(--blue-bg);color:var(--blue-dark);}
+.hl-btn.primary{background:var(--blue);color:#fff;border-color:var(--blue);}
+.hl-btn.primary:hover{background:var(--blue-dark);border-color:var(--blue-dark);color:#fff;}
+
+/* ───── SECTIONS ───── */
+section{padding-bottom:48px;}
+section.hero .wrap{border-top:none;padding-top:48px;}
+.stack-section .wrap,.certs-section .wrap{max-width:1080px;}
+.sec-label{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;color:var(--blue);}
+.sec-title{font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:24px;color:var(--text);}
+
+/* ───── PROJECT CARDS ───── */
+.proj{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:14px;box-shadow:var(--shadow);transition:border-color .2s,transform .15s;}
+.proj:hover{border-color:var(--blue-line);transform:translateY(-1px);}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:10px;flex-wrap:wrap;}
+.proj-title{font-size:16px;font-weight:700;color:var(--text);}
+.proj-tagline{font-size:13.5px;color:var(--muted);margin-bottom:14px;line-height:1.65;}
+.proj-tagline strong{color:var(--text);font-weight:600;}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.ptag{font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px;background:var(--bg3);color:var(--muted);border:1px solid var(--border);}
+.proj-links a{font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;}
+.proj-links a:hover{text-decoration:underline;}
+.proj.dim{opacity:.7;}
+.proj.bridge{border:1px solid var(--blue-line);background:var(--blue-bg);}
+
+/* ───── CAPSULE DIVIDER ───── */
+.capsule-divider{display:flex;align-items:center;gap:14px;margin:28px 0 16px;}
+.capsule-divider::before,.capsule-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+.capsule{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--bg2);border:1px solid var(--border);padding:5px 14px;border-radius:20px;white-space:nowrap;}
+
+/* ───── EXPERIENCE ───── */
+.exp-row{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border2);}
+.exp-row:last-child{border-bottom:none;}
+.exp-period{font-size:12.5px;font-weight:600;color:var(--blue);white-space:nowrap;padding-top:2px;min-width:108px;}
+.exp-body{flex:1;}
+.exp-role{font-size:15px;font-weight:700;color:var(--text);margin-bottom:2px;}
+.exp-co{font-size:12.5px;color:var(--muted);margin-bottom:8px;font-weight:500;}
+.exp-desc{font-size:13px;color:var(--muted);line-height:1.7;}
+.exp-desc strong{color:var(--text);font-weight:600;}
+
+/* ───── STACK GRID ───── */
+.stack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;}
+.stack-item{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;}
+.stack-cat{font-size:10px;color:var(--hint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;font-weight:600;}
+.stack-name{font-size:13px;color:var(--text);font-weight:600;}
+
+/* ───── SCOPE STATS (QA view) ───── */
+.scope-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:32px;}
+.scope-stat{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;}
+.scope-num{font-size:26px;font-weight:800;color:var(--blue);margin-bottom:4px;}
+.scope-lbl{font-size:11.5px;color:var(--muted);font-weight:500;}
+
+/* ───── CERT STRIP ───── */
+.cert-strip{display:flex;flex-wrap:wrap;gap:8px;}
+.cert-chip{font-size:12px;font-weight:500;padding:6px 13px;border-radius:16px;background:var(--bg2);color:var(--muted);border:1px solid var(--border);}
+
+/* ───── FOOTER ───── */
+footer{padding:40px 0 56px;text-align:center;}
+.footer-mark{font-size:12.5px;color:var(--hint);margin-bottom:14px;}
+.footer-links{display:flex;justify-content:center;gap:18px;}
+.footer-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;}
+.footer-links a:hover{color:var(--blue);}
+
+/* ───── PROFILE OVERLAY ───── */
+.profile-backdrop{position:fixed;inset:0;background:rgba(15,23,42,0.5);backdrop-filter:blur(3px);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:80px 20px 20px;}
+.profile-backdrop.open{display:flex;animation:fadein .18s ease;}
+.profile-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:22px;width:100%;max-width:360px;box-shadow:0 12px 36px rgba(15,23,42,0.18);}
+[data-theme="dark"] .profile-card{box-shadow:0 12px 36px rgba(0,0,0,0.5);}
+.profile-top{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--border2);position:relative;}
+.profile-avatar{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0;}
+.profile-name{font-size:15px;font-weight:700;color:var(--text);}
+.profile-role{font-size:12px;color:var(--muted);margin-top:2px;}
+.profile-close{position:absolute;right:0;top:0;width:26px;height:26px;border-radius:6px;border:1px solid var(--border);background:var(--bg2);color:var(--muted);cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;}
+.profile-close:hover{color:var(--text);}
+.profile-links{display:flex;flex-direction:column;gap:6px;}
+.profile-link{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;text-decoration:none;border:1px solid var(--border);background:var(--bg2);transition:all .15s;}
+.profile-link:hover{border-color:var(--blue-line);background:var(--blue-bg);}
+.pl-icon{font-size:17px;flex-shrink:0;}
+.pl-label{font-size:10.5px;color:var(--hint);font-weight:600;text-transform:uppercase;letter-spacing:.04em;}
+.pl-value{font-size:13px;color:var(--text);font-weight:600;}
+
+.view-content{display:none;}
+.view-content.active{display:block;animation:fadein .25s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+
+/* ───── MOBILE NAV MENU ───── */
+.mobile-nav-panel{display:none;}
+.mobile-nav-panel.open{display:flex;flex-direction:column;gap:2px;padding:12px 24px 16px;border-bottom:1px solid var(--border);background:var(--bg);}
+.mobile-nav-panel a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;padding:10px 4px;border-radius:6px;}
+.mobile-nav-panel a:active{background:var(--bg2);color:var(--blue);}
+
+/* ───── RESPONSIVE: TABLET (iPad portrait, 641–880px) ───── */
+@media(max-width:880px) and (min-width:641px){
+  .wrap{max-width:92%;padding:0 28px;}
+  .nav-inner{max-width:92%;padding:14px 28px;}
+}
+
+/* ───── RESPONSIVE: MOBILE (≤640px, phones) ───── */
+@media(max-width:640px){
+  .wrap{max-width:100%;padding:0 18px;}
+  .nav-inner{max-width:100%;padding:12px 16px;}
+  .hero{padding:36px 0 28px;}
+  h1{font-size:clamp(26px,7vw,34px);}
+  .hero-sub{font-size:14.5px;}
+  .nav-right{gap:8px;}
+  .view-switch{order:2;}
+  .nav-inner{flex-wrap:wrap;row-gap:10px;}
+  .exp-row{flex-direction:column;gap:4px;}
+  .exp-period{min-width:auto;}
+  .scope-grid{grid-template-columns:repeat(2,1fr);}
+  .stack-grid{grid-template-columns:repeat(2,1fr);}
+  .proj-top{flex-direction:column;align-items:flex-start;gap:8px;}
+  .hl-btn{flex:1;justify-content:center;text-align:center;}
+  .hero-links{flex-direction:column;}
+  .profile-backdrop{padding:64px 14px 14px;}
+}
+
+/* ───── RESPONSIVE: SMALL PHONE (≤380px) ───── */
+@media(max-width:380px){
+  .scope-grid{grid-template-columns:1fr 1fr;}
+  .stack-grid{grid-template-columns:1fr;}
+  .pill{font-size:11px;padding:4px 10px;}
+}
+</style>
+</head>
+<body data-view="ai">
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-mark">Nikhil<span>.</span></a>
+    <div class="view-switch">
+      <button class="view-btn active" id="btnAI" onclick="setView('ai')">AI Engineer</button>
+      <button class="view-btn" id="btnQA" onclick="setView('qa')">QA Engineer</button>
+    </div>
+    <div class="nav-right">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" title="Menu" aria-label="Open menu" onclick="toggleMobileMenu()"><span aria-hidden="true">☰</span></button>
+      <button class="theme-toggle" id="profileToggle" title="Profile" aria-label="Open profile" onclick="openProfile()"><span aria-hidden="true">👤</span></button>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode"><span aria-hidden="true">🌙</span></button>
+    </div>
+  </div>
+  <div class="mobile-nav-panel" id="mobileNavPanel">
+    <div class="mnp-set" id="mnp-ai">
+      <a href="javascript:void(0)" onclick="jumpTo('ai-projects')">Projects</a>
+      <a href="javascript:void(0)" onclick="jumpTo('ai-experience')">Experience</a>
+      <a href="javascript:void(0)" onclick="jumpTo('ai-stack')">Stack</a>
+      <a href="javascript:void(0)" onclick="jumpTo('ai-certs')">Certs</a>
+    </div>
+    <div class="mnp-set" id="mnp-qa" style="display:none;">
+      <a href="javascript:void(0)" onclick="jumpTo('qa-scope')">Scope</a>
+      <a href="javascript:void(0)" onclick="jumpTo('qa-cases')">Case Studies</a>
+      <a href="javascript:void(0)" onclick="jumpTo('qa-experience')">Experience</a>
+      <a href="javascript:void(0)" onclick="jumpTo('qa-stack')">Stack</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════ PROFILE OVERLAY ═══════════════════ -->
+<div class="profile-backdrop" id="profileBackdrop" onclick="closeProfile(event)">
+  <div class="profile-card" onclick="event.stopPropagation()">
+    <div class="profile-top">
+      <div class="profile-avatar">NT</div>
+      <div>
+        <div class="profile-name">Nikhil Tulsani</div>
+        <div class="profile-role">Senior QA Engineer → AI Engineer</div>
+      </div>
+      <button class="profile-close" onclick="closeProfile()" aria-label="Close profile"><span aria-hidden="true">✕</span></button>
+    </div>
+    <div class="profile-links">
+      <a href="mailto:nikhil.tulsani1@gmail.com" class="profile-link">
+        <span class="pl-icon" aria-hidden="true">✉️</span>
+        <div class="pl-text"><div class="pl-label">Email</div><div class="pl-value">nikhil.tulsani1@gmail.com</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/nikhil-tulsani-3a2575126/" class="profile-link" target="_blank">
+        <span class="pl-icon" aria-hidden="true">💼</span>
+        <div class="pl-text"><div class="pl-label">LinkedIn</div><div class="pl-value">Connect on LinkedIn</div></div>
+      </a>
+      <a href="https://github.com/nikhiltulsani1" class="profile-link" target="_blank">
+        <span class="pl-icon" aria-hidden="true">💻</span>
+        <div class="pl-text"><div class="pl-label">GitHub</div><div class="pl-value">@nikhiltulsani1</div></div>
+      </a>
+      <a href="#" class="profile-link" target="_blank">
+        <span class="pl-icon" aria-hidden="true">📄</span>
+        <div class="pl-text"><div class="pl-label">Resume</div><div class="pl-value">Download PDF</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- ═══════════════════ AI ENGINEER VIEW ═══════════════════ -->
+  <div class="view-content active" id="view-ai">
+
+    <section class="hero" style="border-top:none;padding-top:48px;">
+      <div class="wrap">
+      <div class="hero-eyebrow">Ahmedabad, India</div>
+      <h1>Senior QA Engineer<br>building toward <span class="accent">AI Engineer.</span></h1>
+      <p class="hero-sub"><strong>8 years</strong> shipping production software for US, Australian and UAE clients. Now building agentic AI systems — RAG pipelines, multi-agent orchestration, MCP integrations — with the same verification discipline I brought to QA.</p>
+      <div class="hero-meta">
+        <span class="pill green">14 certifications</span>
+        <span class="pill green">Elite Engineer Award</span>
+        <span class="pill amber">IBM RAGs in progress</span>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/nikhiltulsani1" class="hl-btn primary" target="_blank">View GitHub</a>
+        <a href="mailto:nikhil.tulsani1@gmail.com" class="hl-btn">Email Me</a>
+        <a href="https://www.linkedin.com/in/nikhil-tulsani-3a2575126/" class="hl-btn" target="_blank">LinkedIn</a>
+      </div>
+      </div>
+    </section>
+
+    <section id="ai-projects">
+      <div class="wrap">
+      <div class="sec-label">Selected work</div>
+      <div class="sec-title">Projects</div>
+
+      <div class="proj bridge">
+        <div class="proj-top">
+          <span class="proj-title">US Healthcare Account — QA to Applied AI Engineer</span>
+          <span class="pill purple">QA → AI transition</span>
+        </div>
+        <p class="proj-tagline">Nearly 2 years of end-to-end test automation on a live US healthcare account at <strong>Hexaware Technologies</strong> (DB, Logstash, API, UI, dependent apps). Spent <strong>2.5 months writing test automation scripts with GitHub Copilot</strong> — that hands-on AI-tooling experience became the bridge into an Applied AI Engineer role on the <strong>same account</strong>. Designed the DB schema and built a production AI-powered Portal using <strong>OpenAI Codex</strong>, deployed on AWS (ECS, API Gateway, S3/CDN, Secrets Manager, ADO CI/CD). Currently still actively building on the platform with Codex. <strong>Elite Engineer Recognition Award, May 2026</strong>, for this delivery.</p>
+        <div class="proj-tags">
+          <span class="ptag">Hexaware Technologies</span>
+          <span class="ptag">GitHub Copilot → OpenAI Codex</span>
+          <span class="ptag">DB schema design</span>
+          <span class="ptag">AWS ECS / API GW / S3</span>
+          <span class="ptag">ADO CI/CD</span>
+          <span class="ptag">Active client work</span>
+        </div>
+      </div>
+
+      <div class="capsule-divider"><span class="capsule">Personal Projects</span></div>
+
+      <div class="proj">
+        <div class="proj-top">
+          <span class="proj-title">PRD-to-Sprint Negotiator</span>
+          <span class="pill green">Shipped</span>
+        </div>
+        <p class="proj-tagline">A 5-agent pipeline that reads a PRD and produces a sprint backlog — with <strong>MCP-compatible output</strong> for Jira, Azure DevOps, and Linear. Microsoft Agents League Hackathon 2026, Reasoning Agents track.</p>
+        <div class="proj-tags">
+          <span class="ptag">5-agent pipeline</span>
+          <span class="ptag">MCP payload</span>
+          <span class="ptag">Streamlit</span>
+          <span class="ptag">3-tier fallback</span>
+          <span class="ptag">ThreadPoolExecutor</span>
+        </div>
+        <div class="proj-links"><a href="https://github.com/nikhiltulsani1" target="_blank">View on GitHub →</a></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top">
+          <span class="proj-title">Project Kickstart Agent</span>
+          <span class="pill green">Shipped</span>
+        </div>
+        <p class="proj-tagline">CLI tool that turns a plain-English description into a <strong>production-ready GitHub repo in under 60 seconds</strong> — 5 languages, CI included. Microsoft Agents League Hackathon 2026, Creative Apps track.</p>
+        <div class="proj-tags">
+          <span class="ptag">Azure AI Foundry</span>
+          <span class="ptag">Multi-language CI</span>
+          <span class="ptag">Git Tree API</span>
+          <span class="ptag">Parallel QA agents</span>
+        </div>
+        <div class="proj-links"><a href="https://github.com/nikhiltulsani1" target="_blank">View on GitHub →</a></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top">
+          <span class="proj-title">MyPact — AI Daily Coach &amp; Planner</span>
+          <span class="pill amber">Submitting Thursday</span>
+        </div>
+        <p class="proj-tagline">A context-aware AI coach that already knows your day — workouts, mood, focus sessions — before you say a word. <strong>Gemini 2.0</strong>, on-device voice, Supabase backend, 8 integrated modules. Privacy-first: only aggregated summaries reach the model, never raw personal data.</p>
+        <div class="proj-tags">
+          <span class="ptag">Gemini 2.0</span>
+          <span class="ptag">Voice (on-device)</span>
+          <span class="ptag">Supabase</span>
+          <span class="ptag">Built with Claude Code</span>
+        </div>
+        <div class="proj-links"><a href="#" target="_blank">Play Store — launching soon →</a></div>
+      </div>
+
+      <div class="proj dim">
+        <div class="proj-top">
+          <span class="proj-title">RAG Capstone</span>
+          <span class="pill blue">In progress</span>
+        </div>
+        <p class="proj-tagline">A production RAG pipeline with <strong>RAGAS evaluation, LangSmith tracing, and guardrails</strong> — coming out of the IBM RAG &amp; Agentic AI specialization. Built to be evaluated, not just demoed.</p>
+        <div class="proj-tags">
+          <span class="ptag">RAGAS</span>
+          <span class="ptag">LangSmith</span>
+          <span class="ptag">Vector DB</span>
+          <span class="ptag">Guardrails</span>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="ai-experience">
+      <div class="wrap">
+      <div class="sec-label">Track record</div>
+      <div class="sec-title">Experience</div>
+
+      <div class="exp-row">
+        <div class="exp-period">2022 — Present</div>
+        <div class="exp-body">
+          <div class="exp-role">Senior QA Engineer (E5)</div>
+          <div class="exp-co">Hexaware Technologies · Ahmedabad</div>
+          <div class="exp-desc">4 enterprise clients across the US and Australia — BFSI, healthcare, and insurance domains. Transitioned from QA to Applied AI Engineer work on a US healthcare account — see the QA → AI project above for the full story. <strong>Elite Engineer Recognition Award, May 2026.</strong></div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">2020 — 2022</div>
+        <div class="exp-body">
+          <div class="exp-role">Test Lead → QA Engineer</div>
+          <div class="exp-co">Maruti Techlabs</div>
+          <div class="exp-desc">Full-cycle QA on a SaaS platform for a UAE-based communications client — manual, API, and Python UI automation. Promoted to Test Lead, managed a 4-person team across enterprise client engagements.</div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">2018 — 2020</div>
+        <div class="exp-body">
+          <div class="exp-role">QA Engineer</div>
+          <div class="exp-co">Streebo</div>
+          <div class="exp-desc">SoapUI automation for a US payments client, manual + load testing (JMeter) for multiple BFSI clients including banking and insurance. Informal QA Lead on product automation.</div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="stack-section" id="ai-stack">
+      <div class="wrap">
+      <div class="sec-label">Tools in active use</div>
+      <div class="sec-title">Stack</div>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-cat">Agentic AI</div><div class="stack-name">LangGraph</div></div>
+        <div class="stack-item"><div class="stack-cat">Agentic AI</div><div class="stack-name">MCP</div></div>
+        <div class="stack-item"><div class="stack-cat">Agentic AI</div><div class="stack-name">Subagents</div></div>
+        <div class="stack-item"><div class="stack-cat">Orchestration</div><div class="stack-name">n8n</div></div>
+        <div class="stack-item"><div class="stack-cat">LLM Framework</div><div class="stack-name">LangChain</div></div>
+        <div class="stack-item"><div class="stack-cat">AI Models</div><div class="stack-name">Claude</div></div>
+        <div class="stack-item"><div class="stack-cat">AI Models</div><div class="stack-name">GPT-5.4</div></div>
+        <div class="stack-item"><div class="stack-cat">AI Models</div><div class="stack-name">Gemini 2.0</div></div>
+        <div class="stack-item"><div class="stack-cat">AI Models</div><div class="stack-name">Mistral</div></div>
+        <div class="stack-item"><div class="stack-cat">Cloud</div><div class="stack-name">AWS (ECS, API GW)</div></div>
+        <div class="stack-item"><div class="stack-cat">Cloud</div><div class="stack-name">Azure AI Foundry</div></div>
+        <div class="stack-item"><div class="stack-cat">Backend</div><div class="stack-name">Supabase</div></div>
+        <div class="stack-item"><div class="stack-cat">Language</div><div class="stack-name">Python</div></div>
+        <div class="stack-item"><div class="stack-cat">Testing</div><div class="stack-name">Katalon / Pytest</div></div>
+        <div class="stack-item"><div class="stack-cat">Agentic Dev Tools</div><div class="stack-name">Claude Code</div></div>
+        <div class="stack-item"><div class="stack-cat">Agentic Dev Tools</div><div class="stack-name">OpenAI Codex</div></div>
+        <div class="stack-item"><div class="stack-cat">Agentic Dev Tools</div><div class="stack-name">GitHub Copilot</div></div>
+      </div>
+      </div>
+    </section>
+
+    <section class="certs-section" id="ai-certs">
+      <div class="wrap">
+      <div class="sec-label">14 certifications</div>
+      <div class="sec-title">Certifications</div>
+      <div class="cert-strip">
+        <span class="cert-chip">Claude 101</span>
+        <span class="cert-chip">Agent Skills</span>
+        <span class="cert-chip">Claude Code in Action</span>
+        <span class="cert-chip">Intro to MCP</span>
+        <span class="cert-chip">Subagents</span>
+        <span class="cert-chip">Vanderbilt · Agentic AI</span>
+        <span class="cert-chip">MCP Mastery</span>
+        <span class="cert-chip">Copilot Coding Agent</span>
+        <span class="cert-chip">Codex Guide</span>
+        <span class="cert-chip">AI Agents in LangGraph</span>
+        <span class="cert-chip">IBM GenAI Apps</span>
+        <span class="cert-chip">LangChain MasterClass</span>
+        <span class="cert-chip">LangGraph Autonomous Agents</span>
+        <span class="cert-chip">No-Code ChatGPT</span>
+      </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ═══════════════════ QA ENGINEER VIEW ═══════════════════ -->
+  <div class="view-content" id="view-qa">
+
+    <section class="hero" style="border-top:none;padding-top:48px;">
+      <div class="wrap">
+      <div class="hero-eyebrow">Ahmedabad, India · 9 Years in Quality Engineering</div>
+      <h1>Senior QA Engineer.<br>Full-cycle <span class="accent">test ownership.</span></h1>
+      <p class="hero-sub">8 years of manual, automation, API, and load testing across <strong>BFSI, SaaS, and Healthcare</strong>. Enterprise client engagements across 3 continents. The same rigor now extends into evaluating AI systems.</p>
+      <div class="hero-meta">
+        <span class="pill purple">8 years experience</span>
+        <span class="pill green">Elite Engineer Award</span>
+        <span class="pill blue">Test Lead experience</span>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/nikhiltulsani1" class="hl-btn primary" target="_blank">View GitHub</a>
+        <a href="mailto:nikhil.tulsani1@gmail.com" class="hl-btn">Email Me</a>
+        <a href="https://www.linkedin.com/in/nikhil-tulsani-3a2575126/" class="hl-btn" target="_blank">LinkedIn</a>
+      </div>
+      </div>
+    </section>
+
+    <section id="qa-scope">
+      <div class="wrap">
+      <div class="sec-label">At a glance</div>
+      <div class="sec-title">Scope</div>
+      <div class="scope-grid">
+        <div class="scope-stat"><div class="scope-num">8</div><div class="scope-lbl">Years in QA</div></div>
+        <div class="scope-stat"><div class="scope-num">9</div><div class="scope-lbl">Enterprise clients</div></div>
+        <div class="scope-stat"><div class="scope-num">3</div><div class="scope-lbl">Continents</div></div>
+        <div class="scope-stat"><div class="scope-num">4</div><div class="scope-lbl">Person team led</div></div>
+      </div>
+      </div>
+    </section>
+
+    <section id="qa-cases">
+      <div class="wrap">
+      <div class="sec-label">Concrete examples</div>
+      <div class="sec-title">Case Studies</div>
+
+      <div class="proj bridge">
+        <div class="proj-top">
+          <span class="proj-title">US Healthcare Account — End-to-End Test Automation</span>
+          <span class="pill purple">Full-stack QA</span>
+        </div>
+        <p class="proj-tagline">Nearly 2 years of <strong>end-to-end test automation</strong> on a live US healthcare account — coverage spanning database validation, Logstash pipelines, API layer, and UI, including testing across dependent downstream applications. Full-stack ownership of the test pyramid on a single high-stakes platform. <em>Later transitioned into AI Engineering work on the same account — see the AI Engineer tab for that story.</em></p>
+        <div class="proj-tags">
+          <span class="ptag">Katalon</span>
+          <span class="ptag">Database validation</span>
+          <span class="ptag">Logstash</span>
+          <span class="ptag">API + UI automation</span>
+          <span class="ptag">Dependent apps</span>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top">
+          <span class="proj-title">UAE Communications Platform — Full-Cycle SaaS QA</span>
+          <span class="pill purple">Test Lead</span>
+        </div>
+        <p class="proj-tagline">Full-cycle QA on a SaaS communications platform for a UAE-based client — manual testing, backend validation against <strong>Redis and RabbitMQ</strong>, API testing via Newman/Postman, and Python-based UI automation. Promoted to Test Lead 8 months in, managing a 4-person team across enterprise client engagements.</p>
+        <div class="proj-tags">
+          <span class="ptag">Manual + Automation</span>
+          <span class="ptag">Postman / Newman</span>
+          <span class="ptag">Redis / RabbitMQ</span>
+          <span class="ptag">Python UI automation</span>
+          <span class="ptag">Team leadership</span>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top">
+          <span class="proj-title">Enterprise Product QA — Conversational AI &amp; Platform Products</span>
+          <span class="pill blue">Product QA</span>
+        </div>
+        <p class="proj-tagline">QA across two enterprise products: a <strong>conversational AI / chatbot platform</strong> (testing bot flows, integrations, and platform reliability for a no-code bot builder) and an established platform built in partnership with a <strong>tier-1 technology vendor</strong> — ongoing release testing, regression, and maintenance within mature enterprise release cycles.</p>
+        <div class="proj-tags">
+          <span class="ptag">Conversational AI</span>
+          <span class="ptag">Chatbot platform</span>
+          <span class="ptag">Enterprise release QA</span>
+          <span class="ptag">Regression testing</span>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top">
+          <span class="proj-title">BFSI Client Portfolio — Early Career</span>
+          <span class="pill blue">Early career</span>
+        </div>
+        <p class="proj-tagline">SoapUI automation for a US payments processor. Manual and load testing (JMeter) for multiple banking, insurance, and finance clients. Informal QA Lead on internal product automation. Built the BFSI testing foundation that carried through the rest of the career.</p>
+        <div class="proj-tags">
+          <span class="ptag">SoapUI</span>
+          <span class="ptag">JMeter</span>
+          <span class="ptag">BFSI domain</span>
+          <span class="ptag">Load testing</span>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="qa-experience">
+      <div class="wrap">
+      <div class="sec-label">Track record</div>
+      <div class="sec-title">Experience</div>
+
+      <div class="exp-row">
+        <div class="exp-period">2022 — Present</div>
+        <div class="exp-body">
+          <div class="exp-role">Senior QA Engineer (E5)</div>
+          <div class="exp-co">Hexaware Technologies · Ahmedabad</div>
+          <div class="exp-desc">4 enterprise clients across the US and Australia — API and functional testing across healthcare, insurance, and professional services. <strong>Elite Engineer Recognition Award, May 2026</strong>, for an AI portal delivery on a US healthcare account.</div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">2020 — 2022</div>
+        <div class="exp-body">
+          <div class="exp-role">Test Lead → QA Engineer</div>
+          <div class="exp-co">Maruti Techlabs</div>
+          <div class="exp-desc">Full-cycle QA for a UAE-based SaaS communications platform. Promoted to Test Lead, 4-person team, enterprise client engagements.</div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">2018 — 2020</div>
+        <div class="exp-body">
+          <div class="exp-role">QA Engineer</div>
+          <div class="exp-co">Streebo</div>
+          <div class="exp-desc">Mobile/web test framework internship. SoapUI automation for a US payments client. Manual and load testing for multiple BFSI clients. Informal QA Lead on product automation.</div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="stack-section" id="qa-stack">
+      <div class="wrap">
+      <div class="sec-label">Tools &amp; methods</div>
+      <div class="sec-title">Stack</div>
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-cat">Automation</div><div class="stack-name">Katalon</div></div>
+        <div class="stack-item"><div class="stack-cat">API Testing</div><div class="stack-name">Postman / Newman</div></div>
+        <div class="stack-item"><div class="stack-cat">API Testing</div><div class="stack-name">SoapUI</div></div>
+        <div class="stack-item"><div class="stack-cat">Load Testing</div><div class="stack-name">JMeter</div></div>
+        <div class="stack-item"><div class="stack-cat">UI Automation</div><div class="stack-name">Python</div></div>
+        <div class="stack-item"><div class="stack-cat">Backend Validation</div><div class="stack-name">Redis</div></div>
+        <div class="stack-item"><div class="stack-cat">Backend Validation</div><div class="stack-name">RabbitMQ</div></div>
+        <div class="stack-item"><div class="stack-cat">Methodology</div><div class="stack-name">Manual Testing</div></div>
+        <div class="stack-item"><div class="stack-cat">Methodology</div><div class="stack-name">Functional Testing</div></div>
+        <div class="stack-item"><div class="stack-cat">Methodology</div><div class="stack-name">Full-cycle QA</div></div>
+        <div class="stack-item"><div class="stack-cat">Leadership</div><div class="stack-name">Test Lead</div></div>
+        <div class="stack-item"><div class="stack-cat">Domain</div><div class="stack-name">BFSI / SaaS / Healthcare</div></div>
+      </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-mark">© Nikhil Tulsani · 2026</div>
+    <div class="footer-links">
+      <a href="mailto:nikhil.tulsani1@gmail.com">nikhil.tulsani1@gmail.com</a>
+      <a href="https://github.com/nikhiltulsani1" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var body = document.body;
+  var themeBtn = document.getElementById('themeToggle');
+  var THEME_KEY = 'nikhil_portfolio_theme';
+  var VIEW_KEY = 'nikhil_portfolio_view';
+
+  // Theme
+  var savedTheme = localStorage.getItem(THEME_KEY);
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+  applyTheme(theme);
+  function applyTheme(t){
+    if(t === 'dark'){ root.setAttribute('data-theme','dark'); themeBtn.textContent = '☀️'; }
+    else { root.removeAttribute('data-theme'); themeBtn.textContent = '🌙'; }
+  }
+  themeBtn.addEventListener('click', function(){
+    theme = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+    localStorage.setItem(THEME_KEY, theme);
+    applyTheme(theme);
+  });
+
+  // Profile overlay
+  window.openProfile = function(){
+    document.getElementById('profileBackdrop').classList.add('open');
+  };
+  window.closeProfile = function(e){
+    document.getElementById('profileBackdrop').classList.remove('open');
+  };
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeProfile(); closeMobileMenu(); }
+  });
+
+  // Mobile menu
+  window.toggleMobileMenu = function(){
+    document.getElementById('mobileNavPanel').classList.toggle('open');
+  };
+  window.closeMobileMenu = function(){
+    document.getElementById('mobileNavPanel').classList.remove('open');
+  };
+  window.jumpTo = function(id){
+    closeMobileMenu();
+    var el = document.getElementById(id);
+    if(el){
+      setTimeout(function(){
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 80);
+    }
+  };
+
+  // View toggle
+  var titles = {
+    ai: 'Nikhil Tulsani — AI Engineer | Senior QA Engineer, 9 Years',
+    qa: 'Nikhil Tulsani — Senior QA Engineer | 9 Years, Full-Cycle Test Ownership'
+  };
+  window.setView = function(v){
+    body.setAttribute('data-view', v);
+    document.getElementById('view-ai').classList.toggle('active', v === 'ai');
+    document.getElementById('view-qa').classList.toggle('active', v === 'qa');
+    document.getElementById('btnAI').classList.toggle('active', v === 'ai');
+    document.getElementById('btnQA').classList.toggle('active', v === 'qa');
+    document.getElementById('mnp-ai').style.display = (v === 'ai') ? 'flex' : 'none';
+    document.getElementById('mnp-qa').style.display = (v === 'qa') ? 'flex' : 'none';
+    document.title = titles[v];
+    localStorage.setItem(VIEW_KEY, v);
+    window.scrollTo({top:0, behavior:'instant'});
+  };
+  var savedView = localStorage.getItem(VIEW_KEY) || 'ai';
+  setView(savedView);
+})();
+</script>
+</body>
+</html>
