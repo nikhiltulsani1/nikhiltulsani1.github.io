@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 315" role="img" aria-labelledby="title desc">
+<title id="title">Calibrated RAG workflow illustration</title><desc id="desc">BM25 and dense retrieval combine through rank fusion, with grounding checks before a response or abstention.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102b3c"/><stop offset="1" stop-color="#121d3d"/></linearGradient><pattern id="dots" width="23" height="23" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#81edcd" opacity=".14"/></pattern></defs><rect width="840" height="315" fill="url(#bg)"/><rect width="840" height="315" fill="url(#dots)"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+<text x="38" y="43" font-size="13" fill="#9dc5ca" font-weight="700" letter-spacing="2">CALIBRATED RAG  /  RETRIEVAL + GUARDRAILS</text><text x="735" y="43" font-size="12" fill="#71c4b2">02 / 02</text>
+<rect x="36" y="96" width="160" height="54" rx="11" fill="#28465e" stroke="#4c9aab"/><text x="60" y="129" font-size="18" fill="#f4ffff" font-weight="650">BM25</text>
+<rect x="36" y="166" width="160" height="54" rx="11" fill="#28465e" stroke="#4c9aab"/><text x="60" y="199" font-size="18" fill="#f4ffff" font-weight="650">Dense</text>
+<path d="M196 123h52l30 40h32m-114 30h52l30-30" stroke="#80dfc7" stroke-width="2.8" fill="none"/>
+<rect x="310" y="124" width="140" height="79" rx="12" fill="#233f64" stroke="#779bd4"/><text x="335" y="152" font-size="11" fill="#abc3e9">FUSION</text><text x="335" y="179" font-size="23" fill="#f4ffff" font-weight="700">RRF</text>
+<path d="M450 164h43" stroke="#91beee" stroke-width="2.8"/>
+<rect x="493" y="124" width="147" height="79" rx="12" fill="#28486a" stroke="#84a3d4"/><text x="516" y="152" font-size="11" fill="#afc9e7">VALIDATION</text><text x="516" y="179" font-size="19" fill="#f2f8ff" font-weight="700">Grounding</text>
+<path d="M640 164h31" stroke="#7bdec8" stroke-width="2.8"/><rect x="671" y="124" width="132" height="79" rx="12" fill="#24584e" stroke="#5cbe9d"/><text x="687" y="152" font-size="11" fill="#b2eadb">OUTPUT</text><text x="687" y="178" font-size="15" fill="#edfff8" font-weight="700">Answer /</text><text x="687" y="196" font-size="15" fill="#edfff8" font-weight="700">abstain</text>
+</g><text x="38" y="283" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" fill="#98bec8">Guardrails and abstention reduce unsupported answers; results depend on evaluation setup.</text></svg>
