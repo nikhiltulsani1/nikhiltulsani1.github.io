@@ -57,6 +57,7 @@
 }
 </script>
 
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="./assets/site.css">
 
 </head>
@@ -64,7 +65,13 @@
 
 <nav aria-label="Primary navigation">
   <div class="nav-inner">
-    <a href="#main-content" class="nav-mark" aria-label="Nikhil Tulsani, home">NT<span class="brand-stop">.</span></a>
+    <a href="#main-content" class="nav-mark" aria-label="Nikhil Tulsani — home">
+      <span class="brand-monogram" aria-hidden="true">nt<span class="brand-stop">.</span></span>
+      <span class="brand-wordmark" aria-hidden="true">
+        <strong>NIKHIL TULSANI</strong>
+        <small>ENGINEERING PORTFOLIO</small>
+      </span>
+    </a>
     <div class="view-switch" role="group" aria-label="Portfolio focus">
       <button type="button" class="view-btn active" id="btnAI" aria-pressed="true" onclick="setView('ai')">Applied AI</button>
       <button type="button" class="view-btn" id="btnQA" aria-pressed="false" onclick="setView('qa')">Quality engineering</button>
