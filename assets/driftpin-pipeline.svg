@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 315" role="img" aria-labelledby="title desc">
+<title id="title">DriftPin workflow illustration</title><desc id="desc">PRD documents connect to a requirement registry, generated tests, and evaluation. Structural traceability is illustrated, not measured.</desc>
+<defs><linearGradient id="a" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#18264d"/><stop offset="1" stop-color="#0f1b39"/></linearGradient><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#7b9dee" opacity=".18"/></pattern><linearGradient id="line"><stop stop-color="#8db8ff"/><stop offset="1" stop-color="#7df0d0"/></linearGradient></defs>
+<rect width="840" height="315" fill="url(#a)"/><rect width="840" height="315" fill="url(#dots)"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif"><text x="38" y="43" font-size="13" fill="#9aadd3" font-weight="700" letter-spacing="2">DRIFTPIN  /  EVIDENCE PIPELINE</text><text x="735" y="43" font-size="12" fill="#7c9de2">01 / 02</text></g>
+<path d="M217 158H288m192 0h76m-272 0l-8-6m8 6l-8 6m272-6l-8-6m8 6l-8 6" fill="none" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+<rect x="37" y="94" width="180" height="132" rx="13" fill="#243961" stroke="#6e8bc0"/><text x="57" y="126" font-size="11" fill="#a2b8df">SOURCE</text><text x="57" y="160" font-size="21" fill="#fff" font-weight="650">PRD</text><path d="M57 180h121m-121 12h92m-92 12h109" stroke="#7591b7" stroke-width="4" stroke-linecap="round"/>
+<rect x="289" y="94" width="191" height="132" rx="13" fill="#29345d" stroke="#7d8dd1"/><text x="308" y="126" font-size="11" fill="#aab9ef">STRUCTURE</text><text x="308" y="161" font-size="19" fill="#fff" font-weight="650">Requirements</text><path d="M308 185h135m-135 12h110" stroke="#7a8bb9" stroke-width="4" stroke-linecap="round"/>
+<rect x="556" y="94" width="245" height="132" rx="13" fill="#214655" stroke="#63acaa"/><text x="576" y="126" font-size="11" fill="#9fe6d4">CHECK</text><text x="576" y="161" font-size="20" fill="#f2fff9" font-weight="650">Tests + evals</text>
+<circle cx="591" cy="189" r="10" fill="#277e71"/><path d="m586 189 4 4 7-9" fill="none" stroke="#b7fbe4" stroke-width="2.5"/>
+<text x="613" y="193" font-size="12" fill="#b2dfd7">Traceability + findings</text>
+</g><text x="38" y="284" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" fill="#8ba4ca">Structural completeness is not equivalent to semantic effectiveness.</text>
+</svg>
